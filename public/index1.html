@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>The 38th IEEE Sarnoff Symposium</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sarnoff-styles.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        
+        <script src="js/respond.min.js"></script>
+        
+    <![endif]-->
+
+<!--script src="js/lib/angular.min.js"></script>
+<script src="js/lib/angular-sanitize.min.js"></script-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.28/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.28/angular-sanitize.min.js"></script>
+
+</head>
+
+<body  class="index"  ID="ng-app" data-ng-app="app" ng-controller="mainCtlr">
+	<div id="page-top"></div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="row">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#page-top">Sarnoff Symposium<!--img src="img/Newark.jpg" class="logo" /--></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#page-top">Home</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#speakers">Speakers</a>
+                        </li> 
+                        <li class="page-scroll">
+                            <a href="#authors-instructions">Author Instructions</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#committee">Committee</a>
+                        </li>
+
+                        <li class=" hide page-scroll">
+                            <a href="#tutorials">Tutorials</a>
+                        </li>
+
+                        <li class="page-scroll">
+                            <a href="#registration">Registration</a>
+                        </li>
+
+
+                        <!--
+                        <li class="page-scroll">
+                            <a href="#registration" id="registration-menu">Registration</a>
+                        </li>-->
+
+                        <!--li class="page-scroll">
+                            <a href="#contact">Contact</a>
+                        </li-->
+                    </ul>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!--img class=" img-responsive" src="img/intro5G.png" alt="" -->
+                    <div class="intro-text">
+                        <p> &nbsp; </p>
+                        <span class="name">The 38<sup>th</sup> IEEE Sarnoff Symposium</span>
+                            <hr class="star-light">
+                        <span class="skills">NJIT Campus Center, 150 Bleeker Street, University Heights
+Newark, NJ 07102-1982 <br/> September 18-20, 2017<br/>
+                        <p>&nbsp;</p>
+                        <div class="page-scroll">
+                            <a class="btn btn-outline" href="docs/cfp-ieee-sarnoff-2017.pdf" target="_blank">
+                                Call for Paper
+                            </a>
+                            <a class="btn btn-outline" href="#authors-instructions" target="_blank">
+                                Author Instructions
+                            </a>
+                            <div class=" hide dropdown" style="display:inline; text-align:left;">
+                                <button class="btn btn-outline dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Quick Links
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                    <li role="presentation">
+                                        <a class="btn-outline " href="#r" role="menuitem">
+                                            <i class="fa fa-user-plus"></i> Register Now
+                                        </a>
+                                    </li>
+                                    <li role="presentation"><a href="docs/cfp-ieee-sarnoff-2017.pdf" class="btn-outline" role="menuitem" >
+                                        <i class="fa fa-file-pdf-o"></i> Call for Participation
+                                        </a>
+                                    </li>
+                                   
+                                    <li role="presentation" class="divider"></li>
+                                    <li role="presentation"><a href="docs/parking.pdf" class="btn-outline" role="menuitem" >
+                                        <i class="fa fa-file-pdf-o"></i> Parking Map 
+                                        </a>
+                                    </li>
+                                    <li role="presentation"><a href="docs/5g_booklet_final.pdf" class="btn-outline"  role="menuitem">
+                                        <i class="fa fa-file-pdf-o"></i> Program Booklet 
+                                        </a>
+                                    </li>
+                                    <li role="presentation"><a href="docs/5GSummitSponsorship.pdf" class="btn-outline" role="menuitem" >
+                                        <i class="fa fa-file-pdf-o"></i> Sponsorship & Exhibitors
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+          <div class="credit-bar hide">
+            	<div>Image by <a href="http://www.5g-ppp.eu" target="_blank">www.5g-ppp.eu</a>,  Copyright © 5G-PPP 2016 </div>
+          </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="welcome-text">Since 1978, the IEEE Sarnoff Symposium has been bringing together telecom and communications experts from industry, universities, and governments. The Sarnoff Symposium continues to grow as a premier forum in the northeastern United States for researchers, engineers, and business executives, drawing an attendance from all over the world.  Besides technical sessions, the Symposium will include keynotes, invited talks, expert panels, tutorials, demo/exhibits and posters presentations.</p>
+                </div>
+          </div>
+          <div class="row d-important-dates">
+                    <div class="col-sm-5">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div  class="important-date  clearfix">
+                                    <badge caption="April" class="important-date-badge">16</badge> 
+                                    <div class="important-date-event">Paper <br>Submissions</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" >
+                                <div  class="important-date  clearfix">
+                                    <badge caption="Jun."  class="important-date-badge">29</badge>
+                                    <div class="important-date-event">Notification of <br>acceptance</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div  class="important-date  important-date--long clearfix">
+                            <badge caption="Jul."  class="important-date-badge">10</badge>
+                            <div class="important-date-event">Camera-Ready Submission &<br>Author Registration</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        
+                            <div  class="important-date  clearfix ">
+                                <badge caption="Sept."  class="important-date-badge">18-20</badge>
+                                <div class="important-date-event">Conference<br>dates</div>
+                            </div>
+                        
+                        
+                    </div>
+            </div>
+            <!--div class="row">
+                <div class="col-md-4 col-md-offset-2 col-sm-6 text-center">    
+                    <img src="img/sponsors/comsoc.png" class="img-responsive block-centered" alt="" style="width:180px;">
+                </div>
+                <div class="col-md-4 col-md-offset-1 col-sm-6 text-center">
+                    <img src="img/sponsors/ieee-black@2x.png" class="img-responsive  block-centered" alt="" style="width:180px;">
+                </div>
+            </div--> 
+            
+          
+          
+          <div class="row" >
+              <div class="sponsorslist">
+                <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+
+                    <li class="active"><a href="#orange" data-toggle="tab">Sponsors</a></li>
+                    <li><a href="#yellow" data-toggle="tab">Patrons</a></li>
+                    <!--<li><a href="#green" data-toggle="tab">Silver Patrons</a></li>
+                    <li><a href="#blue" data-toggle="tab">Bronze Patrons</a></li>
+                    <li><a href="#black" data-toggle="tab">Exhibitors</a></li>-->
+                </ul>
+                <div id="sponsors-tabs" class="tab-content">
+                    <!-- 
+                    <div class="tab-pane active" id="red">
+                        <div class="row">
+                            <div class="col-sm-2 portfolio-item">
+                                <img src="img/sponsors/65thlogo.jpg" alt="" style="width:165px;">
+                            </div>
+                            <div class="col-sm-2 col-sm-offset-2 ">
+                                <img src="img/sponsors/ctif-logo-e1414004190384.png"  alt="" style="height:166px; ">
+                            </div>
+                            <div class="col-sm-2 col-sm-offset-2">
+                                <img src="img/sponsors/Region1Logo.gif"  alt="" style="width:240px; margin-top:40px;">
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                    <div class="tab-pane active sponsor-platinum" id="orange">
+                        <div class="row">
+                            <!--<div class="col-sm-2 portfolio-item">
+                                <img src="img/sponsors/NIKSUNLogo_Show.jpg" alt="NIKSUN" style="width:165px;">    
+                            </div>-->
+                            <div class="col-sm-3">    
+                                <img src="img/sponsors/comsoc.png" class="img-responsive block-centered" alt="" style="width:180px;">
+                            </div>
+                            <div class="col-sm-3">
+                                <img src="img/sponsors/ieee-black@2x.png" class="img-responsive  block-centered" alt="" style="width:180px;">
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <div class="tab-pane sponsor-gold" id="yellow">
+                        <div class="row">
+                            
+                        </div>
+                    </div>
+                    <div class="tab-pane sponsor-silver" id="green">
+                        <div class="row">
+                            
+                        </div>
+                    </div>
+                    <div class="tab-pane sponsor-bronze" id="blue">
+                        <div class="row">
+                            
+                        </div>
+                    </div>
+                    <div class="tab-pane exhibitor" id="black">
+                        <div class="row">
+                            
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+    </section>
+<!-- Speakers Section -->
+    <section class="success" id="speakers">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Speakers</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 d-keynotes text-center">
+                    <h3>Keynote Speakers</h3>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 col-lg-4  committee-thumb" ng-repeat="member in keynotes">
+                        <a href="#keynote-{{$index}}" data-toggle="modal" data-ng-show="member.bio">
+                            <img ng-src="img/speakers/{{member.portrait  || 'ph.jpg'}}" src="img/committee/ph.jpg" alt="" />
+                        </a>
+                        <span data-ng-hide="member.bio">
+                            <img ng-src="img/speakers/{{member.portrait  || 'ph.jpg'}}" src="img/committee/ph.jpg" alt="" />
+                        </span>
+                        <div>
+                            <a href="#keynote-{{$index}}" data-toggle="modal" data-ng-show="member.bio">{{member.name}}</a>
+                            <span data-ng-hide="member.bio">{{member.name}}</span><br>
+                            {{member.affiliation}}
+                        </div>
+                    </div>
+                </div>
+                <p>&nbsp; </p>
+            </div>
+            <div class="d-speakers col-lg-12 text-center" ng-if="speakers">
+                <h3>Speakers</h3>
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 col-lg-4  committee-thumb" ng-repeat="member in speakers"><a href="#speaker-{{$index}}" data-toggle="modal" data-ng-show="member.bio"><img ng-src="img/speakers/{{member.portrait  || 'ph.jpg'}}" src="img/committee/ph.jpg" alt="" /></a><span data-ng-hide="member.bio"><img ng-src="img/speakers/{{member.portrait  || 'ph.jpg'}}" src="img/committee/ph.jpg" alt="" /></span><div><a href="#speaker-{{$index}}" data-toggle="modal" data-ng-show="member.bio">{{member.name}}</a><span data-ng-hide="member.bio">{{member.name}}</span><br>
+                {{member.affiliation}}</div></div>
+            </div>
+                            
+            </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <!--a href="#" class="btn btn-lg btn-outline">
+                        <i class="fa fa-download"></i> Download Theme
+                    </a-->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Venue  Section -->
+    <section class="hide venue_section" id="venue">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>Venue and Accommodation</h2>
+                        <hr class="star-light2">
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-lg-6 text-center"></div>
+                </div>
+            
+            <div class="col col-lg-6">
+                            <div style="font-size:1.5em;"><div style="font-size:1.2em; font-weight:700;">
+
+                <p>&nbsp;</p>
+                 <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                   <p>&nbsp;</p>
+
+                <p>Venue: <a href="http://www.dresden-congresscenter.de/en/home"> International Congress Center Dresden</a> </p> 
+                <p><a href="https://mi3.lambdalogic.de/forms/datastore?epk=dih%25HLiA&amp;file=hotels_en" target="_blank"> Hotel Information</a> </p>
+
+                
+                <div class="row"></div>
+            <div class="row"></div>            
+            </div>   
+            </div>
+        </div></div>
+    </section>
+
+    <section class=" authors_section" id="authors-instructions">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Author Instructions</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>The following are instructions for all who have an accepted paper to the Sarnoff Symposium 2017:</p>
+
+                    <p>1) One or more of the paper’s authors should register for Sarnoff ’17 at the full registration price via the following link: <a href="https://edas.info/newPaper.php?c=23475" target="_blank">https://edas.info/newPaper.php?c=23475</a>
+                    After logging in to EDAS, select the “My Papers” tab. Locate your Sarnoff submission’s row. There should also be a column titled “Register.” Click on the ticket icon to get started. If you have a second paper associated with this registration, please include the 10-digit EDAS paper ID in the “Additional paper” section.</p>
+
+                    <p>2) Please prepare the final version of your accepted paper using the IEEE Manuscript Templates for Conference Proceedings (<a href="http://www.ieee.org/conferences_events/conferences/publishing/templates.html" target="_blank">http://www.ieee.org/.../templates.html</a>). The final manuscript should not exceed 6 pages inclusive of figures and references.</p>
+
+                    <p>3) After preparing your finalized paper draft it should be checked for compliance with IEEE Xplore using the IEEE PDF Xpress web site (http://www.pdf-express.org/). You will need to enter the Conference ID for Sarnoff, which is 38820XP, as part of this process.</p>
+
+                    <p>4) After ensuring your document conforms to IEEE standards, it must be uploaded through the EDAS paper submission site. After logging in to EDAS, select the “My Papers” tab. Locate your Sarnoff submission’s row. There should also be a column titled “Upload.” Please submit your final manuscript using the icon at this location.</p>
+
+                    <p>5) Lastly, an IEEE copyright form must be submitted for each accepted paper. This can be accomplished using the “Record Copyright” link in EDAS.</p>
+
+                </div>
+           </div>
+            
+         </div>   
+        </div>
+    </section>
+
+    
+
+    <!-- Committee Section -->
+    <section id="committee" class="success committee_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2> Committee</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-3 committee-thumb text-center" data-ng-repeat="member in organizing">
+                    
+                    <div class="member-role" style=" font-weight:800; overflow:hidden" title="{{member.role}}">{{member.role}}</div>
+                    <img ng-src="img/committee/{{member.portrait || 'ph.jpg'}}" src="img/committee/ph.jpg" alt="" />
+                    <div class="member-caption" style="margin-top:-10px;">
+                        <strong>{{member.name}}</strong><br>
+                            {{member.affiliation}}&nbsp;
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="row">
+            	<div class=" hide d-steering col-lg-12 text-center">
+                    <h3>Steering Committee</h3>
+                    <div class="row">
+                        <div class="col-lg-3 committee-thumb text-center" ng-repeat="member in steering">
+                            <img ng-src="img/committee/{{member.portrait  || 'ph.jpg'}}" src="img/committee/ph.jpg" alt="" />
+                            <div>
+                                <strong>{{member.name}}</strong><br>
+                                {{member.affiliation}}
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp; </p>
+                </div>
+               
+            </div>
+            <div class="row">
+            	<div class="tpc col-lg-12 text-center">
+                    <h3>Technical Program Committee</h3>
+                    <div class="row">
+                        <div class="tpc_list">
+                            <span>Dr. Ana Aguiar, Instituto de Telecomunicações</span>
+                            <span>Dr. Walid Ahmed, Broadcom, Inc.</span>
+                            <span>Dr. Ahmed Aleroud, Yarmouk University</span>
+                            <span>Dr. Izzat Alsmadi, University of New Haven</span>
+                            <span>Prof. Nabi Sertac Artan, New York Institute of Technology</span>
+                            <span>Dr. Ashraf Badawi, Zewail City for Science and Technology</span>
+                            <span>Dr. Nilanjan Banerjee, IBM Research</span>
+                            <span>Dr. Ana Barbancho, Universidad de Málaga</span>
+                            <span>Dr. Isabel Barbancho, Universidad de Malaga</span>
+                            <span>Dr. Gautam Bhanage, Cisco Systems</span>
+                            <span>Dr. Md Zakirul Alam Bhuiyan, Fordham University, USA</span>
+                            <span>Dr. James Cannady, Nova Southeastern University</span>
+                            <span>Dr. Aresh Dadlani, Gwangju Institute of Science and Technology (GIST)</span>
+                            <span>Dr. Venkateswara Dasari, US Army Research Laboratory</span>
+                            <span>Dr. Swades De, Indian Institute of Technology Delhi</span>
+                            <span>Dr. Jitender Deogun, University of Nebraska-Lincoln</span>
+                            <span>Dr. Benjamin Dingel, Nasfine Photonics Incorporated</span>
+                            <span>Mr. Hassan El GHAZI, INPT</span>
+                            <span>Dr. Safiullah Faizullah, Hewlett-Packard</span>
+                            <span>Dr. Steven Gordon, Central Queensland University</span>
+                            <span>Dr. Ibrahim Hokelek, TUBITAK BILGEM</span>
+                            <span>Dr. Shweta Jain, York College CUNY</span>
+                            <span>Dr. Philip Ji, NEC Laboratories America, Inc.</span>
+                            <span>Dr. Naima Kaabouch, University of North Dakota</span>
+                            <span>Dr. Hameedullah Kazi, Isra University</span>
+                            <span>Dr. Lyes Khoukhi, University of Technology of Troyes</span>
+                            <span>Dr. Abdallah Khreishah, New Jersey Institute of Technology</span>
+                            <span>Dr. Marc Koerner, Technische Universität Berlin</span>
+                            <span>Dr. Silvija Kokalj-Filipovic, Naval Research Laboratory</span>
+                            <span>Dr. Elias Kpodzo, L-3 Communications TE</span>
+                            <span>Dr. Feng Li, Indiana University-Purdue University Indianapolis</span>
+                            <span>Dr. Wenjia Li, New York Institute of Technology</span>
+                            <span>Dr. Ziping Liu, Southeast Missouri State University</span>
+                            <span>Dr. Guoqi Luo, Stevens Institute of Technologyloomberg</span>
+                            <span>Dr. Prodromos Makris, University of Patras & Computer Technology Institute</span>
+                            <span>Prof. Rashid Mehmood, King AbdulAziz University</span>
+                            <span>Dr. Jogesh K. Muppala, Hong Kong University of Science and Technology</span>
+                            <span>Prof. Senthil Kumar Muthukrishnan, PSG College of Technology, Coimbatore</span>
+                            <span>Dr. Mehmet Ozdemir, Istanbul Sehir University</span>
+                            <span>Dr. Anil Pereira, Georgia Gwinnett College</span>
+                            <span>Prof. Euripides Petrakis, Technical University of Crete (TUC)</span>
+                            <span>Mr. Roger Piqueras Jover, Bloomberg Lp – Security Research Lab</span>
+                            <span>Dr. Alessia Polemi, Science and Engineering, College of Engineering, Drexel University</span>
+                            <span>Dr. Pratap Prasad, Intel</span>
+                            <span>Prof. Lijun Qian, Prairie View A&M University</span>
+                            <span>Dr. Sridhar Raghavan, Entreprenuer</span>
+                            <span>Dr. Michele Scarpiniti, Sapienza University of Rome</span>
+                            <span>Mr. Sajjad Shah, Bahria University Islamabad</span>
+                            <span>Dr. Sunny Shakya, Ciena Corporation</span>
+                            <span>Dr. Shashank Shanbhag, Salesforce, Inc.</span>
+                            <span>Mr. Sachin Sharma, University of Arkansas at Little Rock</span>
+                            <span>Prof. Biplab Sikdar, National University of Singapore</span>
+                            <span>Dr. Koushik Sinha, Southern Illinois University</span>
+                            <span>Prof. Iickho Song, Korea Advanced Institute of Science and Technology</span>
+                            <span>Dr. Stelios Sotiriadis, University of Toronto</span>
+                            <span>Dr. Podili VS Srinivas, Gokaraju Rangaraju Institute of Engineering and Technology</span>
+                            <span>Dr. Seema Sud, Aerospace Corporation</span>
+                            <span>Dr. Mahmoudreza Tahmassebpour, Iran University of Science and Technology</span>
+                            <span>Prof. M. Umit Uyar, City College of The City University of New York</span>
+                            <span>Dr. Krishna Kumar Venkatasubramanian, Worcester Polytechnic Institute</span>
+                            <span>Dr. Dimitrios Vergados, University of Patras</span>
+                            <span>Dr. Jonathan Voris, New York Institute of Technology</span>
+                            <span>Dr. Anwar Walid, Bell-labs, Alcatel Lucent</span>
+                            <span>Prof. Donglin Wang, New York Institute of Technology</span>
+                            <span>Dr. Yang Wang, La Salle University</span>
+                            <span>Prof. Ning Weng, Southern Illinois University at Carbondale</span>
+                            <span>Prof. Jie Wu, Temple University</span>
+                            <span>Prof. Hong Xu, City University of Hong Kong</span>
+                            <span>Dr. Nikhil Yadav, St. John’s University</span>
+                            <span>Dr. Scott Yam, Queen’s University</span>
+                            <span>Dr. Zhutian Yang, Harbin Institute of Technology</span>
+                            <span>Dr. Honghai Zhang, Google</span>
+                            <span>Dr. Yifan Zhang, Binghamton University</span>
+                            <span>Dr. Juzi Zhao, University of Massachusetts Lowell</span>
+                        </div>
+                    </div>
+                    <p>&nbsp; </p>
+                </div>
+               
+            </div>
+
+            <div class="row">
+            	<div class="tpc tpc--reviewers col-lg-12 text-center">
+                    <h3>Reviewers</h3>
+                    <div class="row">
+                        <div class="tpc_list">
+                            <span>Mr. Akeem Adebomehin, University of Essex</span>
+                            <span>Mr. Oluseyi Adejuwon, Prairie View A&M University, USA</span>
+                            <span>Mr. S. Agrawal, Delhi Technological University (DTU) Formerly Delhi College of Engineering (DCE)</span>
+                            <span>Dr. Fawaz Alassery, Stevens Institute of Technology</span>
+                            <span>Mr. Mustafa Aljumaili, University of New Haven</span>
+                            <span>Mr. Abdullah Alshahrani, The Catholic University of America</span>
+                            <span>Mr. Hocine Ameur, University of Technology of Troyes</span>
+                            <span>Mr. Deepak Nadig Anantha, Computer Science & Engineering, University of Nebraska-Lincoln, USA</span>
+                            <span>Mr. Muhammad Awan, University of Arkansas at Little Rock</span>
+                            <span>Mr. Obinna Emelumadu, NYIT</span>
+                            <span>Mr. Cheng-Liang Hsieh, Southern Illinois University Carbondale</span>
+                            <span>Mr. Brian Jalaian, Virginia Tech</span>
+                            <span>Mr. Harshvardhan Joshi, North Carolina State University</span>
+                            <span>Mr. Hailu Kassa, Addis Ababa University</span>
+                            <span>Mr. Bhupendra Kumar, IIT Delhi</span>
+                            <span>Mr. Ioannis Mamounakis, University of Patras</span>
+                            <span>Mr. Swapnil Mhaske, Rutgers University</span>
+                            <span>Mr. Khalid Mohammadani, Isra University</span>
+                            <span>Mr. Ramadhan Mstafa, University of Bridgeport</span>
+                            <span>Ms. Shreyasee Mukherjee, WINLAB, Rutgers University, USA</span>
+                            <span>Mr. Ludwig Murillo, Prairie View A&M University, USA</span>
+                            <span>Mr. Farhan Nisar, Pakistan</span>
+                            <span>Mr. Wasiu Oduola, Prairie View A & M University</span>
+                            <span>Mr. Timothy Oladunni, Bowie State University</span>
+                            <span>Mr. Oluwaseyi Omotere, Prairie View A&M University</span>
+                            <span>Dr. Wei Peng, Intel Corporation, USA</span>
+                            <span>Mr. Emmanuel Peters, Columbia University</span>
+                            <span>Ms. Fatima Salahdine, University of North Dakota</span>
+                            <span>Mr. Aydin Saribudak, Electrical Engineering, City College of New York, USA</span>
+                            <span>Mr. Ali Shahini, New Jersey Institute of Technology</span>
+                            <span>Mr. Xiang Sun, New Jersey Institute of Technology</span>
+                            <span>Dr. Yin Sun, Electrical and Computer Engineering, Ohio State University, USA</span>
+                            <span>Prof. Yasutake Takahashi, Graduate School of Engineering, University of Fukui, Japan</span>
+                            <span>Mr. Robinson Udechukwu, North Carolina State University</span>
+                            <span>Mr. Demir Yavas, Istanbul Technical University</span>
+                            <span>Ms. Che Zhang, City University of Hong Kong</span>
+                            <span>Mr. Jianmin Zou, Academia, USA</span>
+                        </div>
+                    </div>
+                    <p>&nbsp; </p>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+         
+<!-- Schedule  Section -->
+    <section class="hide success" id="schedule">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Agenda</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-lg-12 text-center">
+                    <div style="text-align:left">
+                    	<div class="agenda-item"  ng-repeat="item in agenda" data-ng-class="{keynote: item.keynote}"><div>{{item.startTime}} – {{item.endTime}}</div>
+                    	<div class="event">{{item.event}} </div>
+                    	<div data-ng-if="item.speaker" ><span data-ng-if="item.event"> --  </span>{{item.speaker}}</div> <span ng-show="item.speakerKey">[<a href="docs/slides/{{item.speakerKey}}-5GSummit-Princeton-05262015.pdf">slides</a>]</span></div> 
+                        <!-- -->
+                      
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+  
+
+	
+    <!-- Patrons  Section -->
+    <section class="success hide" id="schedule">
+      <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Patrons</h2>
+                    <hr class="star-light">
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p></p>
+                </div>
+            </div>
+    <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center"></div>
+          </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="registration">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Registration</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    
+
+                        <div class="row control-group"></div>
+                        <div class="row ">
+       <div class="col col-lg-12">
+         <p>&nbsp;</p>
+
+<p> Please create an EDAS ID at http://edas.info before registering.<br>
+</p>
+
+<div class="text-center">
+  <a href="https://edas.info/newPaper.php?c=23475" class="btn btn-lg btn-primary">
+    <i class="fa fa-user-plus"></i> Register now on EDAS
+    </a>
+</div>
+         <p>&nbsp;</p>
+         <p>&nbsp;</p>
+         <p>&nbsp;</p>
+         <p>&nbsp;</p>
+       </div>                 
+                  </div>
+                        <div class="row "></div>
+
+                    
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <!--div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>About Freelancer</h3>
+                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div-->
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; IEEE Princeton CentralJersey Section 2017
+                        <br>
+                        <small>Send comments/suggestions to komlan [at[ njit [dot] edu</small></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visble-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Title</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+<!--	
+	<div data-ng-repeat="member in keynotes" class="portfolio-modal modal fade" id="keynote-{{$index}}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                        
+                        <h2>{{member.name}}<br>
+                            <small>{{member.bio.title}}</small></h2>
+                            <hr class="star-primary">
+                            
+            <img ng-src="img/speakers/{{member.portrait  || 'ph.jpg'}}" src="img/committee/ph.jpg" alt="" />       <div data-ng-bind-html="member.bio.description"></div>
+                            
+                            
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+    <div data-ng-repeat="member in keynotes" id="keynote-{{$index}}" class="modal fade in">
+    <div class="modal-dialog bio-dialog ">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+            			<div class="modal-body">
+                <h2>{{member.name}}<br>
+                <small>{{member.bio.title}}<span data-ng-show="member.bio.title"> - </span>{{member.affiliation}}</small></h2>
+            <div><img data-ng-show="member.portrait" ng-src="img/speakers/{{member.portrait  || 'ph.jpg'}}" src="img/committee/ph.jpg" alt="" />       <div data-ng-bind-html="member.bio.description"></div></div>
+            <div class="d-bio-talk" data-ng-show="member.talk">
+            	<h3><span>Keynote Talk</span><br>{{member.talk}}</h3>
+            	<div data-ng-bind-html="member.abstract"></div>
+            </div>
+            
+            </div>
+            		</div>
+                </div>
+           
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                
+            </div>
+             </div>
+        </div>
+    </div>
+</div>
+	
+    <div data-ng-repeat="member in speakers" id="speaker-{{$index}}" class="modal fade in">
+    <div class="modal-dialog bio-dialog ">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+            			<div class="modal-body">
+                <h2>{{member.name}}<br>
+                <small><span data-ng-bind-html="member.bio.title"></span><span data-ng-show="member.bio.title"> - </span>{{member.affiliation}}</small></h2>
+            <div><img data-ng-show="member.portrait" ng-src="img/speakers/{{member.portrait  || 'ph.jpg'}}" src="img/committee/ph.jpg" alt="" />       <div data-ng-bind-html="member.bio.description"></div></div>
+            <div class="d-bio-talk" data-ng-show="member.talk">
+            	<h3><span>Talk</span><br>{{member.talk}}</h3>
+            	<div data-ng-bind-html="member.abstract"></div>
+            
+            </div>
+            </div>
+            
+            </div>
+            		</div>
+                </div>
+            
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+	</div>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

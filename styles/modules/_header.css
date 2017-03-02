@@ -1,0 +1,7 @@
+header {
+    border-bottom: solid 10px $mainBlue;
+}
+
+.nav-top {
+    border-bottom: solid 10px $primary;
+}

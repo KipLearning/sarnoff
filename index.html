@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>The 37th IEEE Sarnoff Symposium</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sarnoff-style.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        
+        <script src="js/respond.min.js"></script>
+        
+    <![endif]-->
+
+<!--script src="js/lib/angular.min.js"></script>
+<script src="js/lib/angular-sanitize.min.js"></script-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.28/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.28/angular-sanitize.min.js"></script>
+
+</head>
+
+<body  class="index"  ID="ng-app" data-ng-app="app" ng-controller="mainCtlr">
+	<div id="page-top"></div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Sarnoff Symposium</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#page-top">Home</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#speakers">Speakers</a>
+                    </li> 
+                    <li class="page-scroll">
+                        <a href="#venue">Venue</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#committee">Organizing Committee</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#schedule">Agenda</a>
+                    </li>
+                    
+                    
+                   
+					<li class="page-scroll">
+                        <a href="#registration" id="registration-menu">Registration <span>Closed</span></a>
+                    </li>
+                    
+                    <!--li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li-->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!--img class=" img-responsive" src="img/intro5G.png" alt="" -->
+                    <div class="intro-text">
+                        <span class="name">The 37th IEEE Sarnoff Symposium</span>
+                      <hr class="star-light">
+                        <span class="skills">Newark, New Jersey. September 18-20, 2017<br>
+                        <p>&nbsp;</p>
+                        <div class="page-scroll">
+                        <a class="btn btn-outline" href="https://picasaweb.google.com/100322249492590171134/IEEE5GSummitPrincetonNewJersey" target="_blank">
+                        <i class="fa fa-user-plus"></i> Pictures from the 2015 5G Summit
+                    </a>
+                    <div class="dropdown" style="display:inline; text-align:left;">
+                        <button class="btn btn-outline dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Quick Links
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                          <li role="presentation"><a class="btn-outline " href="#registration" role="menuitem">
+                        <i class="fa fa-user-plus"></i> Register Now
+                    </a></li>
+                          <li role="presentation"><a href="docs/IEEE-5G-Summit-CFP.pdf" class="btn-outline" role="menuitem" >
+                        <i class="fa fa-file-pdf-o"></i> Call for Participation
+                    </a></li>
+                          <li role="presentation"><a href="docs/5g-agenda.pdf" class="btn-outline"  role="menuitem">
+                        <i class="fa fa-file-pdf-o"></i> Agenda
+                    </a></li>
+                          <li role="presentation" class="divider"></li>
+                          <li role="presentation"><a href="docs/parking.pdf" class="btn-outline" role="menuitem" >
+                        <i class="fa fa-file-pdf-o"></i> Parking Map 
+                    </a></li>
+                    		<li role="presentation"><a href="docs/5g_booklet_final.pdf" class="btn-outline"  role="menuitem">
+                        <i class="fa fa-file-pdf-o"></i> Program Booklet 
+                    </a></li>
+                            <li role="presentation"><a href="docs/5GSummitSponsorship.pdf" class="btn-outline" role="menuitem" >
+                        <i class="fa fa-file-pdf-o"></i> Sponsorship & Exhibitors
+                    </a></li>
+                        </ul>
+                      </div>
+                  
+          
+                    	
+                    	
+         
+
+         
+         </div>
+                        <!--
+                        <a href="#registrationModal6" data-toggle="modal" class="btn btn-lg btn-outline">
+                        <i class="fa fa-user-plus"></i> Register now
+                    </a>-->
+</span>
+                        
+                    </div>
+                </div>
+            </div>
+          <div class="credit-bar">
+            	<div>Image by <a href="http://www.5g-ppp.eu" target="_blank">www.5g-ppp.eu</a>,  Copyright © 5G-PPP 2016 </div>
+          </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <div class="col-lg-12 text-center">
+                  <!-- 
+                    <h2>About</h2>
+                    <hr class="star-primary">
+                -->
+                  <div style="margin:0px 0 40px 0px;">
+                    <p>While keeping the focus on research in core network technologies from academia and inviting submissions from ecosystem stakeholders, IEEE Sarnoff Symposium 2017 will also provide the platform to cover the perspectives of vertical industries. Keeping this in mind, our Call for Papers encompasses a wide variety of topics covering theory, application and practice and has a broad appeal for researchers and practitioners alike.
+
+Through a series of keynote talks, invited talks, technical paper presentations, panel sessions, tutorial sessions, industry exhibits and poster sessions, IEEE Sarnoff Symposium will bring together leading researchers and practitioners in academia and industry to deliberate, discuss and share findings on leading edge research, implementation experiences and challenges.</p>
+                  </div>
+                  <!--p>The Summit is sponsored by IEEE Communication Society and co-sponsored by IEEE Princeton / Central Jersey Section, CTIF-USA and Princeton University </p-->
+                  <p></p>
+                </div>
+                <p>&nbsp;</p>
+              </div>
+          </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                  
+                        
+                        <img src="img/sponsors/ComSoc.png" class="img-responsive" alt="" style="width:300px; margin:20px 0 60px 0px;">
+                    
+                </div>
+            </div> 
+            
+          <div class="row">   
+            <div class="col-sm-2 portfolio-item">
+                    
+                        
+                        <img src="img/sponsors/65thlogo.jpg" alt="" style="width:165px;">
+                   
+			</div>
+            <div class="col-sm-2 col-sm-offset-1">
+                <img src="img/sponsors/ctif-logo-e1414004190384.png"  alt="" style="height:166px;">
+            </div>
+            <div class="col-sm-2 col-sm-offset-1">
+                    <img src="img/sponsors/Region1Logo.gif"  alt="" style="width:240px; margin-top:40px;">
+            </div>
+            <div class="col-sm-2 col-sm-offset-1">
+                    <img src="img/sponsors/IEEE.TV.jpg"  alt="" style="width:240px; margin-top: 23px;">
+            </div>
+          </div>
+          
+          <div class="row" style="margin-top:40px;">
+          	<ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+           	 <!--
+                <li class="active"><a href="#red" data-toggle="tab">Co-Sponsors</a></li>
+              -->  
+              	<li class="active"><a href="#orange" data-toggle="tab">Platinum Patrons</a></li>
+                <li><a href="#yellow" data-toggle="tab">Gold Patrons</a></li>
+                <li><a href="#green" data-toggle="tab">Silver Patrons</a></li>
+                <li><a href="#blue" data-toggle="tab">Bronze Patrons</a></li>
+                <li><a href="#black" data-toggle="tab">Exhibitors</a></li>
+            </ul>
+    <div id="sponsors-tabs" class="tab-content">
+    	<!-- 
+        <div class="tab-pane active" id="red">
+            <div class="row">
+                <div class="col-sm-2 portfolio-item">
+                    <img src="img/sponsors/65thlogo.jpg" alt="" style="width:165px;">
+    			</div>
+                <div class="col-sm-2 col-sm-offset-2 ">
+                    <img src="img/sponsors/ctif-logo-e1414004190384.png"  alt="" style="height:166px; ">
+                </div>
+                <div class="col-sm-2 col-sm-offset-2">
+                    <img src="img/sponsors/Region1Logo.gif"  alt="" style="width:240px; margin-top:40px;">
+                </div>
+            </div>
+        </div>
+        -->
+        <div class="tab-pane active sponsor-platinum" id="orange">
+            <div class="row">
+            	<div class="col-sm-2 portfolio-item">
+                    <img src="img/sponsors/NIKSUNLogo_Show.jpg" alt="NIKSUN" style="width:165px;">    
+    			</div>
+                <div class="col-sm-2 portfolio-item" style="z-index:5;">
+                    <img src="img/sponsors/ERI_UF_black.jpg" alt="ERICSSON" style="width:165px;">    
+    			</div>
+                 <div class="col-sm-2 portfolio-item" style="margin-right:80px;">
+                    <img src="img/sponsors/alcatel-lucent.jpg" alt="Alcatel-Lucent" style="margin-left: -40px;" >    
+    			</div>
+                <div class="col-sm-2 portfolio-item" >
+                    <img src="img/sponsors/Huawei.jpg" alt="Huawei" style="width:140px;">    
+    			</div>
+            </div>
+        </div>
+        <div class="tab-pane sponsor-gold" id="yellow">
+            <div class="row">
+            	
+            </div>
+        </div>
+        <div class="tab-pane sponsor-silver" id="green">
+            <div class="row">
+            	<div class="col-sm-2 portfolio-item">
+                    <img src="img/sponsors/qualcomm.png" alt="Qualcomm" style="width:150px;">    
+    			</div>
+                <div class="col-sm-3 portfolio-item">
+                    <img src="img/sponsors/NI.png" alt="National Instruments" style="height: 70px; margin-top: 25px;">    
+    			</div>
+                <div class="col-sm-3 portfolio-item">
+                    <img src="img/sponsors/ibm.jpg" alt="IBM" style="height: 92px; margin-top: 16px;">    
+    			</div>
+            </div>
+        </div>
+        <div class="tab-pane sponsor-bronze" id="blue">
+            <div class="row">
+            	<div class="col-sm-2 portfolio-item">
+                    <img src="img/sponsors/RiverPublishers.jpg" alt="River Publishers" style="height:100px;">    
+    			</div>
+            </div>
+        </div>
+        <div class="tab-pane exhibitor" id="black">
+            <div class="row">
+            	<div class="col-sm-2 portfolio-item">
+                    <img src="img/sponsors/azimuth.gif" alt="" style="">    
+    			</div>
+                <div class="col-sm-2 portfolio-item d-sponsor-keysight">
+                    <img src="img/sponsors/Keysight.jpg" alt="" style="height: 100px; margin-top: 10px; margin-left: 80px;">    
+    			</div>
+            </div>
+        </div>
+    </div>
+          </div>
+        </div>
+    </section>
+<!-- Speakers Section -->
+    <section class="success" id="speakers">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Speakers</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 d-keynotes text-center">
+                <h3>Keynote Speakers</h3>
+                <div class="row">
+                    <div class="col-lg-4  committee-thumb" ng-repeat="member in keynotes"><a href="#keynote-{{$index}}" data-toggle="modal" data-ng-show="member.bio"><img ng-src="img/speakers/{{member.portrait  || 'ph.jpg'}}" src="img/committee/ph.jpg" alt="" /></a><span data-ng-hide="member.bio"><img ng-src="img/speakers/{{member.portrait  || 'ph.jpg'}}" src="img/committee/ph.jpg" alt="" /></span><div><a href="#keynote-{{$index}}" data-toggle="modal" data-ng-show="member.bio">{{member.name}}</a><span data-ng-hide="member.bio">{{member.name}}</span><br>
+    {{member.affiliation}}</div></div>
+                </div>
+                
+                
+                    
+                    <p>&nbsp; </p>
+            </div>
+                <div class="d-speakers col-lg-12 text-center">
+                <h3>Speakers</h3>
+                <div class="row">
+                    <div class="col-lg-3 committee-thumb" ng-repeat="member in speakers"><a href="#speaker-{{$index}}" data-toggle="modal" data-ng-show="member.bio"><img ng-src="img/speakers/{{member.portrait  || 'ph.jpg'}}" src="img/committee/ph.jpg" alt="" /></a><span data-ng-hide="member.bio"><img ng-src="img/speakers/{{member.portrait  || 'ph.jpg'}}" src="img/committee/ph.jpg" alt="" /></span><div><a href="#speaker-{{$index}}" data-toggle="modal" data-ng-show="member.bio">{{member.name}}</a><span data-ng-hide="member.bio">{{member.name}}</span><br>
+    {{member.affiliation}}</div></div>
+</div>
+                
+            </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <!--a href="#" class="btn btn-lg btn-outline">
+                        <i class="fa fa-download"></i> Download Theme
+                    </a-->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Venue  Section -->
+    <section class="success schedule_section" id="venue">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Venue and Accommodation</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-lg-6 text-center">
+                   		<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3040.6249067138933!2d-74.6526391436254!3d40.350666140133704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s35+Olden+Street%2C+Princeton%2C+NJ!5e0!3m2!1sen!2sus!4v1425022229464" width="100%" height="450" frameborder="0" style="border:0"></iframe>
+                     </div>
+                    	
+                   
+                    <div class="col col-lg-6">
+                    	<div style="font-size:1.5em;"><div style="font-size:1.2em; font-weight:700;">Friend Center at Princeton University</div>
+						35 Olden Street
+						Princeton, NJ
+						</div>
+                     </div>
+                </div>
+            
+            <div class="row">
+            	<div class="col col-lg-12">
+            		<h2>Accomodations</h2>
+                </div>
+                <div class="col col-lg-12">
+                <p>We are pleased to partner with the Westin Princeton at Forrestal Village, which is a short drive from the Friend Center, for conference housing.  The conference room rate, good for Monday, May 25 and Tuesday, May 26, 2015, is $109/night. Shuttle service to/from the hotel and Friend Center will be provided. Please use this link to book the hotel, <a href=https://www.starwoodmeeting.com/StarGroupsWeb/res?id=1504241681&key=1242BBA2> Link to Hotel Booking</A></p>
+                <br>
+                </div>
+            </div>
+<div class="row">
+            	<div class="col col-lg-12">
+            		<h2>Parking Options</h2>
+                </div>
+                <div class="col col-lg-12">
+                  <p>1. Parking Lot 21 - Take the shuttle to Friends Center(Shuttle runs in certain frequency)<br>
+                  2. There are parking lots around the campus in Princeton Downtown<br>
+                  3. Metered Parking: Nassau, Williams, Olden, and Prospect Streets</p>
+                  <p>Useful link:  <a href="http://www.princeton.edu/main/visiting/aroundcampus/parking/">http://www.princeton.edu/main/visiting/aroundcampus/parking/</a></p>
+                </div>
+          </div>            
+         </div>   
+        </div>
+    </section>
+    <!-- Committee Section -->
+    <section id="committee">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Organizing Committee</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="d-organizing col-lg-12">
+                <!--h3>Organizing Committee</h3-->
+                <div class="row">
+                    <div class="col-lg-3 committee-thumb text-center" data-ng-repeat="member in organizing"><div class="member-role" style=" font-weight:800; overflow:hidden" title="{{member.role}}">{{member.role}}</div><img ng-src="img/committee/{{member.portrait || 'ph.jpg'}}" src="img/committee/ph.jpg" alt="" /><div class="member-caption" style="margin-top:-10px;"><strong>{{member.name}}</strong><br>
+    {{member.affiliation}}</div></div>
+</div>
+                
+            </div>
+            	<div class="d-steering col-lg-12 text-center">
+                <h3>Steering Committee</h3>
+                <div class="row">
+                    <div class="col-lg-3 committee-thumb text-center" ng-repeat="member in steering">
+                    <!--a href="#portfolioModal1" class="portfolio-link" data-toggle="modal"-->
+                    <img ng-src="img/committee/{{member.portrait  || 'ph.jpg'}}" src="img/committee/ph.jpg" alt="" /><div><strong>{{member.name}}</strong><br>
+    {{member.affiliation}}</div><!--/a-->
+    </div>
+                </div>
+                
+                
+                    
+                    <p>&nbsp; </p>
+            </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <!--a href="#" class="btn btn-lg btn-outline">
+                        <i class="fa fa-download"></i> Download Theme
+                    </a-->
+                </div>
+            </div>
+        </div>
+    </section>
+         
+<!-- Schedule  Section -->
+    <section class="success" id="schedule">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Agenda</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-lg-12 text-center">
+                    <div style="text-align:left">
+                    	<div class="agenda-item"  ng-repeat="item in agenda" data-ng-class="{keynote: item.keynote}"><div>{{item.startTime}} – {{item.endTime}}</div>
+                    	<div class="event">{{item.event}} </div>
+                    	<div data-ng-if="item.speaker" ><span data-ng-if="item.event"> --  </span>{{item.speaker}}</div> <span ng-show="item.speakerKey">[<a href="docs/slides/{{item.speakerKey}}-5GSummit-Princeton-05262015.pdf">slides</a>]</span></div> 
+                        <!-- -->
+                      
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+  
+
+	
+    <!-- Patrons  Section -->
+    <section class="success hide" id="schedule">
+      <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Patrons</h2>
+                    <hr class="star-light">
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p></p>
+                </div>
+            </div>
+    <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center"></div>
+          </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="registration">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Registration</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    
+
+                        <div class="row control-group"></div>
+                        <div class="row ">
+       <div class="col col-lg-12">
+         <p><strong>Registration is now closed. </strong></p>
+         <!--<p>Advance registration was open for the 1st IEEE International 5G Summit through 11:59 pm EST on Wednesday, May 13, 2015.  After that, regular registration fees are in effect. </p> -->
+         <p>The advance fee schedule, good through 11:59 pm EST Wednesday, May 13, 2015, is $50 (IEEE members) / $75 (non-IEEE members). The regular fee schedule is $75 (IEEE members) / $100 (non-IEEE members). Registration fee and Life Members is $25.</p> 
+<p>Sponsors can also sign up through Registration Link below. Please contact <strong>ieee5gsummit@gmail.com or call Ashutosh Dutta at 908-642-8593</strong> in case of questions.</p>
+
+<p> Please create an EDAS ID at http://edas.info before registering.<br>
+</p>
+
+<div class="text-center">
+  <a href="https://edas.info/registerPerson.php?c=19931" class="btn btn-lg btn-primary">
+    <i class="fa fa-user-plus"></i> Register now on EDAS
+    </a>
+</div>
+         <p>&nbsp;</p>
+         <p>&nbsp;</p>
+         <p>&nbsp;</p>
+         <p>&nbsp;</p>
+       </div>                 
+                  </div>
+                        <div class="row "></div>
+
+                    
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <!--div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>About Freelancer</h3>
+                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div-->
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; IEEE Princeton CentralJersey Section 2015
+                        <br>
+                        <small>Send comments/suggestions to komlan [at[ njit [dot] edu</small></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visble-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Title</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+<!--	
+	<div data-ng-repeat="member in keynotes" class="portfolio-modal modal fade" id="keynote-{{$index}}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                        
+                        <h2>{{member.name}}<br>
+                            <small>{{member.bio.title}}</small></h2>
+                            <hr class="star-primary">
+                            
+            <img ng-src="img/speakers/{{member.portrait  || 'ph.jpg'}}" src="img/committee/ph.jpg" alt="" />       <div data-ng-bind-html="member.bio.description"></div>
+                            
+                            
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+    <div data-ng-repeat="member in keynotes" id="keynote-{{$index}}" class="modal fade in">
+    <div class="modal-dialog bio-dialog ">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+            			<div class="modal-body">
+                <h2>{{member.name}}<br>
+                <small>{{member.bio.title}}<span data-ng-show="member.bio.title"> - </span>{{member.affiliation}}</small></h2>
+            <div><img data-ng-show="member.portrait" ng-src="img/speakers/{{member.portrait  || 'ph.jpg'}}" src="img/committee/ph.jpg" alt="" />       <div data-ng-bind-html="member.bio.description"></div></div>
+            <div class="d-bio-talk" data-ng-show="member.talk">
+            	<h3><span>Keynote Talk</span><br>{{member.talk}}</h3>
+            	<div data-ng-bind-html="member.abstract"></div>
+            </div>
+            
+            </div>
+            		</div>
+                </div>
+           
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                
+            </div>
+             </div>
+        </div>
+    </div>
+</div>
+	
+    <div data-ng-repeat="member in speakers" id="speaker-{{$index}}" class="modal fade in">
+    <div class="modal-dialog bio-dialog ">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+            			<div class="modal-body">
+                <h2>{{member.name}}<br>
+                <small><span data-ng-bind-html="member.bio.title"></span><span data-ng-show="member.bio.title"> - </span>{{member.affiliation}}</small></h2>
+            <div><img data-ng-show="member.portrait" ng-src="img/speakers/{{member.portrait  || 'ph.jpg'}}" src="img/committee/ph.jpg" alt="" />       <div data-ng-bind-html="member.bio.description"></div></div>
+            <div class="d-bio-talk" data-ng-show="member.talk">
+            	<h3><span>Talk</span><br>{{member.talk}}</h3>
+            	<div data-ng-bind-html="member.abstract"></div>
+            
+            </div>
+            </div>
+            
+            </div>
+            		</div>
+                </div>
+            
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+	</div>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/app.js?v6"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+.tpc  {
+    &_list {
+        column-count: 2;
+        text-align: left;  
+
+        span {
+            display: block;
+        }
+    }
+    
+}

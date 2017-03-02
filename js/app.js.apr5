@@ -1,0 +1,135 @@
+
+
+// jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function() {
+    $('body').on('click', '.page-scroll a', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+});
+
+// Floating label headings for the contact form
+$(function() {
+    $("body").on("input propertychange", ".floating-label-form-group", function(e) {
+        $(this).toggleClass("floating-label-form-group-with-value", !! $(e.target).val());
+    }).on("focus", ".floating-label-form-group", function() {
+        $(this).addClass("floating-label-form-group-with-focus");
+    }).on("blur", ".floating-label-form-group", function() {
+        $(this).removeClass("floating-label-form-group-with-focus");
+    });
+});
+
+// Highlight the top nav as scrolling occurs
+$('body').scrollspy({
+    target: '.navbar-fixed-top'
+})
+
+// Closes the Responsive Menu on Menu Item Click
+$('.navbar-collapse ul li a').click(function() {
+    $('.navbar-toggle:visible').click();
+});
+
+
+// JavaScript Document
+angular
+	.module('app', ['ngSanitize'])
+	.controller('mainCtlr', mainCtlr)
+	.filter('rawHtml', function ($sce) {
+        return function (state) {
+            if (state == 1) {
+                return $sce.trustAsHtml(state);
+            }
+            else {
+                return $sce.trustAsHtml(state);
+            }
+        }
+    });
+	
+mainCtlr.$inject = ['$scope'];
+
+function mainCtlr($scope){
+	$scope.message = "Hello";
+	$scope.speakers = [
+							
+							{name:'Prof. Mung Chiang', affiliation:'Princeton University', title:'', portrait:'MungChiang.jpg', talk:"Fog Networking for 5G and IoT", bio: {title:"", description:"<p>Mung Chiang is the Arthur LeGrand Doty Professor of Electrical Engineering at Princeton University. He graduated from Stanford University with B.S., M.S., and Ph.D. in 1999, 2000, and 2003, respectively. His research has been on network utility maximization/network function optimization, Fog networks/IoT, Smart Data Pricing, and social learning networks. He received the 2013 Alan T. Waterman Award from National Science Foundation, the highest honor to US young scientist and engineers, the 2012 Kiyo Tomiyasu Award from IEEE, and various young investigator awards. He co-authored papers that received the IEEE INFOCOM 2012 Best Paper Award and the IEEE SECON 2013 Best Paper Award, and lead to a Yelp Data Challenge 2014 Grand Prize. A 2007 Technology Review TR35 Young Innovator, he created the Princeton EDGE Lab in 2009 to bridge the theory-practice divide in networking by spanning from proofs to prototypes, resulting in a few technology transfers to industry and in startup companies enabling open toll-free content and data-driven learning. As the inaugural Chairman of the Princeton Entrepreneurship Advisory Committee and Director of the Keller Center for Innovations in Engineering Education, he helped initiate entrepreneurship funds, incubators, curricular/co-curricular programs, and mentorship/ecosystem networks at Princeton University, and was selected as a 2014 New Jersey (non-profit) CEO of the Year by NJ Technology Council. His Massive Open Online Courses on networks reached about 250,000 students since 2012, and he received the 2013 Frederick E. Terman Award from the American Society of Engineering Education. His two undergraduate textbooks became Amazon bestsellers in Technology and “Networked Life: 20 Questions and Answers” received the 2012 PROSE Award in Science and Engineering by the Association of American Publishers. He was named a Guggenheim Fellow in 2014.</p>"}},
+							
+							{name:'Prof. Dipankar Raychaudhuri', affiliation:'WINLAB', title:'', portrait:'DipankarRaychaudhuri.jpg', talk:"5G Network Architecture and the Future Mobile Internet", abstract: "<p>This talk provides a discussion of one of the central design challenges associated with next-generation “5G” wireless systems - that of effectively converging 3GPP-based mobile networks with the global Internet.  Although the trend towards “flat” IP-based architectures for cellular networks is well under way with LTE, significant architectural evolution (or revolution enabled by emerging technologies such as SDN) will be needed to achieve the goal of supporting the needs of mobile devices and applications as “first-class” services on the Internet.  Several emerging mobility service scenarios including hetnet/small cell, multi-network access, mobile cloud, IoT (Internet-of-Things) and V2V (vehicle-to-vehicle) are examined and related network service requirements such as user mobility, disruption tolerance, multi-homing, content/service addressability and context-aware delivery are identified.  Drawing from our experience with the ongoing NSF-sponsored “MobilityFirst” future Internet architecture project, we outline a possible protocol solution based on the “GUID (Globally Unique Identifier) Service Layer” which enables a clean separation of naming and addressing, and provides intrinsic support for a wide variety of mobility services.  Strategies for evolutionary deployment of the proposed techniques are also discussed.  The talk concludes with a brief outline of the MobilityFirst proof-of-concept prototype currently being deployed on the GENI meso-scale networking testbed.</p>", 
+							bio: {title:"", description:"<p>Dipankar Raychaudhuri is Distinguished Professor, Electrical & Computer Engineering and Director, WINLAB (Wireless Information Network Lab) at Rutgers University. As WINLAB's Director, he is responsible for an internationally recognized industry-university research center specializing in wireless technology. He is also PI for several large U.S. National Science Foundation funded projects including the “ORBIT” wireless testbed and the “MobilityFirst” future Internet architecture.</p>\
+<p>Dr. Raychaudhuri has previously held corporate R&D positions including: Chief Scientist, Iospan Wireless (2000-01), AGM & Dept Head, NEC Laboratories (1993-99) and Head, Broadband Communications, Sarnoff Corp (1990-92).  He obtained the B.Tech (Hons) from IIT Kharagpur in 1976 and the M.S. and Ph.D degrees from SUNY, Stony Brook in 1978, 79. He is a Fellow of the IEEE.</p>"}},
+							{name:'Dr. Xiao-Feng Qi', affiliation:'Huawei', title:'Senior Director', portrait:'XiaoFengQi.jpg', talk: "", bio: {title:"Senior Director", description: "<p>Dr. Qi has worked in telecom R&D since 1992, and has led R&D teams at Level One, Intel, and Broadcom, covering modem algorithm research and development efforts over a range of wired and wireless standards and products, including ADSL, 802.11n, GSM and LTE. Since September 2014 he has been with Futurewei as head of its Radio Algorithm Research group, spearheading radio algorithms innovations for the next-generation dense wideband networks. He obtained his PhD EE in 1992 from the University of Connecticut on bio-inspired stochastic learning algorithms.</p>"}},
+							
+							{name:'Prof. Henning Schulzrinne', affiliation:'Columbia University', title:'', portrait:'HenningSchulzrinne.jpg', talk:"", bio: {title:"", description: "<p>Prof.  Henning Schulzrinne, Levi Professor of Computer Science at Columbia University, received his Ph.D.  from the University of Massachusetts in Amherst, Massachusetts.  He was an MTS at AT&T Bell Laboratories and an associate department head at GMD-Fokus (Berlin), before joining the Computer Science and Electrical Engineering departments at Columbia University.  He served as chair of the Department of Computer Science from 2004 to 2009, as Engineering Fellow at the US Federal Communications Commission (FCC) in 2010 and 2011, and as Chief Technology Officer and Technical Advisor at the FCC from 2012.</p>\
+<p>He has published more than 250 journal and conference papers, and more than 70 Internet RFCs.  Protocols co-developed by him, such as RTP, RTSP and SIP, are now Internet standards, used by almost all Internet telephony and multimedia applications.  His research interests include Internet multimedia systems, ubiquitous computing, and mobile systems.</p> \
+<p>He is a Fellow of the ACM and IEEE, has received the New York City Mayor's Award for Excellence in Science and Technology, the VON Pioneer Award, TCCC service award, IEEE Region 1 William Terry Award for Lifetime Distinguished Service to IEEE, the UMass Computer Science Outstanding Alumni recognition and is a member of the Internet Hall of Fame.</p>"}}, 
+							{name:'Asha Keddy', affiliation:'Intel', title:'', portrait:'AshaKeddy.jpg'},
+							{name:'Dr. Chih-Lin I', affiliation:'China Mobile', title:'Chief Architect', portrait:'ChihLinI.jpg', talk:"", bio: {title:"Chief Architect", description:"<p>Chih-Lin I is the China Mobile Chief Scientist of Wireless Technologies, in charge of advanced wireless communication R&D effort of China Mobile Research Institute (CMRI). She established the Green Communications Research Center of China Mobile, spearheading major initiatives including 5G Key Technologies R&D; high energy efficiency system architecture, technologies, and devices; green energy; C-RAN and soft base station.</p>\
+<p>Chih-Lin received her Ph.D. degree in Electrical Engineering from Stanford University, has almost 30 years experience in wireless communication area. She has worked in various world-class companies and research institutes, including wireless communication fundamental research department of AT&T Bell Labs; Headquarter of AT&T, as Director of Wireless Communications Infrastructure and Access Technology; ITRI of Taiwan, as Director of Wireless Communication Technology; Hong Kong ASTRI, as VP and the Founding GD of Communications Technology Domain. Chih-Lin received the Trans. COM Stephen Rice Best Paper Award, and is a winner of CCCP “National 1000 talent” program. She was an elected Board Member of IEEE ComSoc, Chair of ComSoc Meeting and Conference Board, and the Founding Chair of IEEE WCNC Steering Committee. She is currently an Executive Board Member of GreenTouch, and a Network Operator Council Member of ETSI NFV.</p>"}},
+							{name:'Dr Malcolm Robertson', affiliation:'Keysight Technologies', title:'5G Planning Manager', portrait:'MalcolmRobertson.jpg', talk:"Speed to Insight:  Measurement and Metrology in 5G", abstract:"", bio: {title:"5G Planning Manager", description:"<p>Malcolm Robertson joined Keysight Technologies (then Agilent Technologies) in 2000, working in the development of wireless test solutions for cellular and non-cellular applications.  He has held positions in manufacturing engineering, R&D management, and strategic planning.  Malcolm holds a Bachelor of Science (Honours) degree in Physics and Electronics and a PhD from the University of St.Andrews in Scotland.  His PhD and subsequent postgraduate work was undertaken as part of the millimeter-wave and terahertz research group, focusing on novel millimeter-wave sources.</p>"}},	
+							{name:'James Kimery', affiliation:'National Instruments (NI)', title:'Director of Marketing', portrait:'JamesKimery.jpg', talk:"5G: From Theory to Practice", abstract:"", bio: {title:"Director of Marketing", description:"<p>James Kimery is the Director of Marketing for National Instruments Wireless Research and SDR initiatives.  In this role, James is responsible for company’s 5G strategy encompassing both research and business initiatives.  In this role, James leads NI’s RF and Communications Lead User program which works with leading researchers across the world to accelerate the transition from theory to prototype.  James also manages the company’s software defined radio business including the Ettus Research subsidiary acquired by NI in 2010.  In 2014, James chaired the IEEE Globecom industry committee which was held in Austin, Texas.  Prior to joining NI, James was the Director of Marketing for Silicon Laboratories' wireless division. As Director, the wireless division grew revenues exceeding $250M (from $5M) and produced several industry innovations including the first integrated CMOS RF synthesizer and transceiver for cellular communications, the first digitally controlled crystal oscillator, and the first integrated single chip phone (AeroFONE).  AeroFONE was voted by the IEEE as one of the top 40 innovative ICs ever developed.  James also worked at National Instruments before transitioning to Silicon Labs and led many successful programs including the concept and launch of the PCI eXtensions for Instrumentation (PXI) platform.  James was a founding member of the VXIplug&play Systems Alliance, VISA working group, and PXI System Alliance.  He has authored over 30 technical papers and articles covering a variety of wireless and test and measurement related topics.  James holds degrees from the University of Texas at Austin (MBA) and Texas A&M University (BSEE).</p>"}},
+							{name:'Tim Grance', affiliation:'NIST', title:'Senior Scientist', portrait:'TimGrance.jpg', talk:"Musings on a Vocabulary for the Composition of Things", abstract: "", bio: {title:"Senior Scientist", description:"<p>Tim Grance is a senior computer scientist at the National Institute of Standards and Technology. He has held a variety of positions at NIST including Group Manager, Systems and Network Security and Program Manager for Cyber and Network Security. He led a broad portfolio of projects including high profile projects such as the NIST Hash Competition, Cloud Computing, Protocol Security (DNS, BGP, IPv6), Combinatorial Testing, and the National Vulnerability Database. He is presently a senior researcher advising on projects in cloud computing, mobile devices, internet of things, and big data. He has written extensively on cloud computing, incident handling, privacy, and identity management. He is a two-time recipient of the US Department of Commerce’s highest award—a Gold Medal, from the Secretary of Commerce.</p>"}}
+						];
+	$scope.keynotes = [
+							{name:'Dr. Marian Croak', affiliation:'Google', title:'VP', portrait:'MarianCroak.jpg', talk:"The Implications of 5G on the Next 5 Billion Users", bio:{title:"VP of Access Strategy and Emerging Markets", description: "<p>Marian Croak is the Vice President of Access Strategy and Emerging Markets at Google, Inc. Marian joined Google in late 2014 after retiring from AT&T as an SVP responsible for advanced research and innovation, and designing and developing one of the world's largest wireless and broadband networks.  Marian holds over 200 patents mostly focused on IP technology. Marian has received numerous awards, including the 2013 and 2014 Edison Patent Awards, was inducted into the Women in Technology International's Hall of Fame in 2013, and, was named by Fierce Wireless as the one of the ten 2014 Most Influential Women in Wireless. Marian attended Princeton University and received her doctorate in quantitative analysis and psychology.</p>"}},
+							{name:'Joe Cozzolino', affiliation:'Cisco', title:'Senior VP', portrait:'JoeCozzolino.jpg', talk: "", bio: {title: "Senior Vice President, GM Mobility and Service Provider Video Infrastructure", description:"<p>Joe Cozzolino is Senior Vice President and General Manager of Cisco's Mobility and Service Provider Video Infrastructure business groups. In this role, he is responsible for orchestrating global business strategy and execution for the entire Cisco mobility product portfolio and technology solutions for mobile service operators. He also oversees the strategy and development of Cisco's video hardware portfolio, which includes cable modems, video gateways, home management gateways, and set-top boxes. He manages a global team of engineers, architects, product line managers, technical marketing engineers, and business development managers.</p>\
+<p>Cozzolino brings over 25 years of experience in wireline and CATV engineering, general management, sales, and customer service to Cisco. He joined Cisco in 2013 from Motorola, where he was most recently Senior Vice President and General Manager of Video Network Infrastructure for Motorola Mobility. In that role, he was responsible for next-generation access, Cloud DVR, video processing, and IP solutions. He also led the firm's Home & Networks Mobility business in EMEA and Asia Pacific, where he was responsible for sales, services, and integration for complex mobile networks across the region as well as video service providers. Earlier in his career, Cozzolino led worldwide customer operations at RiverDelta Networks and was General Manager at ADC Telecommunications.</p>\
+<p>Cozzolino holds a bachelor's degree in electrical engineering from University of Massachusetts Dartmouth and a master's degree in business administration from Anna Maria College.</p>"}},
+							{name:'Dr. Edward G. Amoroso', affiliation:'AT&T', title:'SVP & Chief Security Officer', portrait:'EdwardAmoroso.jpg', talk: "From Enterprise Perimeter to Secure Cloud", bio: {title:"SVP and Chief Security Officer", description:"<p>Dr. Edward G. Amoroso Senior Vice President , Chief Security Officer, AT&T Services, Inc. Dr. Edward G. Amoroso currently serves as Senior Vice President and Chief Security Officer at AT&T, where his primary responsibilities lie in the real-time protection of AT&T’s vast enterprise, network, and computing infrastructure, including its emerging LTE mobile network and cloud services. Ed’s team is presently focused on creating innovative means for reducing the risk of Advanced Persistent Threat (APT), Distributed Denial of Service (DDOS), mobile malware, and cloud infrastructure attacks targeting AT&T and its customers. Ed’s team works specifically in the area of advanced threat analytics, virtualization of cloud resident security protections, enterprise security policy and architecture, and advanced detection of malware. During his twenty-nine year career with AT&T, beginning at Bell Labs, Ed has focused exclusively on cyber security, working on projects ranging from Unix operating system security to critical infrastructure protection design. Ed is the author of dozens of technical papers and reports, as well as five published books on the topic of cyber security. For the past twenty-five years, he has also served as adjunct professor of computer science at the Stevens Institute of Technology, where he has introduced roughly 2,500 graduate students to the topic of computer security. Ed holds the BS degree in physics from Dickinson College, and the M.S. and Ph.D. degrees in computer science from the Stevens Institute of Technology. Ed is also a graduate of the Columbia Business School. In 2000, Ed was awarded the AT&T Labs Technology Medal and was elected an AT&T Fellow in 2009. Ed’s work has been featured in major news media such as the Wall Street Journal, the New York Times, and CNN. He has recently completed, with his seventeen-year-old son Matthew, a high school textbook on computer science entitled “From Gates to Apps” (Silicon Press, 2013).</p>"}}
+							];
+	$scope.steering = [{name: "Ramjee Prasad",affiliation: "Aalborg University", portrait: "Ramjee.jpg"},
+						{name: "Vince Poor",affiliation: "Princeton University", portrait: "PoorVincen.jpg"},
+						{name: "Parag Pruthi",affiliation: "NIKSUN", portrait: "ParagPruthi.jpg"},
+						{name: "Nirwan Ansari",affiliation: "NJIT", portrait: "NirwanAnsari.jpg"},
+						{name: "Cristina Comaniciu",affiliation: "Stevens Institute of Technology", portrait: "CristinaComaniciu.jpg"},
+						{name: "Susan Brooks",affiliation: "Communication Society", portrait: "SusanBrooks.jpg"},
+						{name: "Stan Moyer",affiliation: "Inventures, Inc.", portrait: "StanMoyer.jpg"},
+						
+						{name: "Doug Zuckerman",affiliation: "IEEE ComSoc Past President", portrait: "DougZuckerman.jpg"},
+						{name: "Merrily Hartmann",affiliation: "ComSoc Director – North America Region", portrait: "MerrilyHartmann.jpg"},
+						];
+						
+	$scope.organizing = [
+						{name: "Dr. Ashutosh  Dutta",affiliation: "AT&T", portrait: "AshutoshDutta.jpg", role:"General Chair"},
+						{name: "John Pape",affiliation: "Communication Society", portrait: "JohnPape.jpg", role: "Marketing Chair"},
+						{name: "Bruce Worthman",affiliation: "IEEE Communications Society", portrait: "BruceWorthman.jpg", role: "Finance Chair"},
+						{name: "Craig Wentz",affiliation: "C&J Engineering Services", portrait: "CraigWentz.jpg", role: "Local Arrangement Co-Chair"},
+						{name: "Dr. Komlan Egoh",affiliation: "NJIT", portrait: "KomlanEgoh.jpg", role: "Communication and Web Chair"},
+						
+						{name: "Prof. Shweta Jain",affiliation: "CUNY", portrait: "ShwetaJain.jpg", role: "General Co-Chair"},
+						{name: "Dr. Deepak Kataria",affiliation: "IP Junction", portrait: "DeepakKataria.jpg", role: "Program Co-Chair"},
+						{name: "Irfan Lateef",affiliation: "NJ Coastal Section", portrait: "IrfanLateef.jpg", role: "Registration Co-Chair"},
+						
+						{name: "Roger Piqueras",affiliation: "AT&T", portrait: "RogerPiqueras.jpg", role: "Program Co-Chair"},
+						{name: "Dr. Kyriakos Manousakis",affiliation: "Applied Communication Sciences (ACS)", portrait: "KyriakosManousakis.jpg", role: "Registration Co-Chair"},
+						{name: "Dr. Neeli Prasad",affiliation: "Aalborg University", portrait: "NeeliPrasad.jpg", role: "General Co-Chair"},
+						{name: "Dr. Chi-Ming Chen",affiliation: "AT&T", portrait: "ChiMingChen.jpg", role: "Industry Sponsorship Co-Chair"},
+						{name: "Dr. Christian Makaya",affiliation: "IBM", portrait: "ChristianMakaya.jpg", role: "Publicity Co-Chair"},
+						
+						{name: "Dr. Priyadarsan Patra",affiliation: "Intel", portrait: "PriyadarsanPatra.jpg", role: "Publicity Co-Chair"},
+						{name: "Dr. Elias Kpodzo",affiliation: "L-3 Communications TE", portrait: "EliasKpodzo.jpg", role: "Local Arrangement Co-Chair"},	
+						{name: "Marilyn Catis",affiliation: "Communication Society", portrait: "MarilynCatis.jpg", role: "Marketing Co-Chair"},		
+						];
+	$scope.agenda = [
+		{startTime:'7:30',endTime:'8:45 AM',event:'Registration, Coffee, Breakfast',speaker:''},
+		{startTime:'8:45',endTime:'8:50 AM',event:'Welcome Address',speaker:'Dr. Ashutosh Dutta'},
+		{startTime:'8:50',endTime:'9:00 AM',event:'Opening Remarks',speaker:'Prof. Vince Poor, Prof. Ramjee Prasad and Dr. Doug Zuckerman'},
+		{startTime:'9:00',endTime:'9:45 AM',event:'Keynote Talk 1',speaker:'Dr. Marian Croak, VP Google', confirmed: true},
+		{startTime:'9:45',endTime:'10:15 AM',event:'',speaker:'Prof. Mung Chiang,  Princeton University', confirmed: true},
+		{startTime:'10:15',endTime:'10:45 AM',event:'',speaker:'Dr Malcolm Robertson, 5G Planning Manager, CTO Office, Keysight Technologies'},
+		{startTime:'10:45',endTime:'11:00 AM',event:'Break',speaker:''},
+		{startTime:'11:00',endTime:'11:30 AM',event:'',speaker:'Prof. Dipankar Raychaudhuri, WINLAB', confirmed: true},
+		{startTime:'11:30',endTime:'12:15 PM',event:'Keynote Talk 2',speaker:'Joseph Cozzolino, SVP, Cisco', confirmed: true},
+		{startTime:'12:15',endTime:'1:00 PM',event:'Lunch',speaker:''},
+		{startTime:'1:00',endTime:'1:30 PM',event:'',speaker:'Dr. Chih-Lin I, Chief Architect, China Mobile '},
+		{startTime:'1:30',endTime:'2:00 PM',event:'',speaker:'Prof. Henning Schulzrinne, Columbia University', confirmed: true},
+		{startTime:'2:00',endTime:'2:30 PM',event:'',speaker:'Asha Keddy, GM and VP, Intel'},
+		{startTime:'2:30',endTime:'3:00 PM',event:'',speaker:'Tim Grance, NIST'},
+		{startTime:'3:00',endTime:'3:15 PM',event:'Break',speaker:''},
+		{startTime:'3:15',endTime:'4:00 PM',event:'Keynote Talk 3',speaker:'Dr. Edward G. Amoroso, SVP & Chief Security Officer, AT&T', confirmed: true},
+		{startTime:'4:00',endTime:'4:30 PM',event:'',speaker:'Dr. Xiao-Feng Qi, Senior Director, Huawei'},
+		{startTime:'4:30',endTime:'5:00 PM',event:'',speaker:'James Kimery, National Instruments (NI)'},
+		{startTime:'5:00',endTime:'6:00 PM',event:'Networking and Reception',speaker:''}
+	];
+}
